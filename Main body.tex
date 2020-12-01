@@ -11,6 +11,8 @@
 \usepackage{csquotes}
 \usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
 
+\usepackage{hyperref}
+
 \usepackage{pageslts}
 \usepackage{lastpage}
 
@@ -20,7 +22,7 @@
 \newcommand{\texttitle}{Operating Systems Project: Kernel Optimizatio}
 
 \title{\center{\includegraphics[width=4cm]{logo}}\\ \texttitle}
-\author{\normalsize Fundor333 }
+\author{\normalsize Fundor333\\ mail@fundor333.com }
 \date{\includegraphics[scale=0.4]{mom}}
 
 \makeatletter
@@ -31,6 +33,8 @@
 \fancypagestyle{generic}{%
   \fancyhf{}% Clear all headers/footers
   \fancyhead[C]{\includegraphics[width=2cm]{logo}}% Header Centred
+  \fancyhead[L]{fundor333.com}
+  \fancyhead[R]{mail@fundor333.com}  
   \fancyfoot[C]{\small\texttitle\\ \thepage\ of \lastpageref{LastPages}}% Footer Centred
   \renewcommand{\headrulewidth}{1pt}% 2pt header rule
   \renewcommand{\headrule}{\hbox to\headwidth{%
