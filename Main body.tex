@@ -7,33 +7,45 @@
 \usepackage{fancyhdr}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
 \usepackage{csquotes}
 \usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
 
-\title{Operating Systems Project: Kernel Optimizatio}
+\usepackage{pageslts}
+\usepackage{lastpage}
 
+\usepackage[headheight=110pt]{geometry}
+ 
 
+\newcommand{\texttitle}{Operating Systems Project: Kernel Optimizatio}
+
+\title{\center{\includegraphics[width=4cm]{logo}}\\ \texttitle}
 \author{\normalsize Fundor333 }
 \date{\includegraphics[scale=0.4]{mom}}
 
+\makeatletter
 
 \bibliography{bibliografia} 
 
+\pagenumbering{arabic}
+\fancypagestyle{generic}{%
+  \fancyhf{}% Clear all headers/footers
+  \fancyhead[C]{\includegraphics[width=2cm]{logo}}% Header Centred
+  \fancyfoot[C]{\small\texttitle\\ \thepage\ of \lastpageref{LastPages}}% Footer Centred
+  \renewcommand{\headrulewidth}{1pt}% 2pt header rule
+  \renewcommand{\headrule}{\hbox to\headwidth{%
+    \color[HTML]{8d0801}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{1pt}% No footer rule
+  \renewcommand{\footrule}{\hbox to\headwidth{%
+    \color[HTML]{8d0801}\leaders\hrule height \headrulewidth\hfill}}
+}
 
-\pagestyle{fancy}
 
-\rhead{}
-\lhead{}
-\chead{\nouppercase\rightmark}
-\cfoot{\thepage}
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{1pt}
-
-
-\begin{document} 
+\begin{document}
+\pagestyle{generic}
 
 \maketitle
-
+\noindent{\color[HTML]{8d0801} \rule{\textwidth}{1pt}}
 
 \section{Abstract}
 
@@ -41,7 +53,7 @@
 
 \section{Introduction}
 
-\lipsum[5-9]
+\lipsum[5-12]
 
 \printbibliography
 
